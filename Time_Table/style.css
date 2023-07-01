@@ -1,0 +1,10 @@
+body{
+    margin-top: 50px;
+  }
+   table,td,tr{
+    border-collapse: collapse;
+    border: 2px solid black;
+   }
+   th{
+    color: red;
+   }
