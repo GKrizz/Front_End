@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <script type="text/javascript">
+    /**/
+    function validate()
+    {
+        var Username=document.getElementById("uname");
+        var password=document.getElementById("pass");
+
+        if(Username.value.trim()=="" || password.value.trim()=="")
+       {
+        alert("No Blank values allowed")
+        return false;
+       }
+       else
+       {
+        true
+       }
+    }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validate()" action="message.html" autocomplete="off">
+        <input id="uname" type="text" placeholder="Username"/> <br><br>
+        <input id="pass" type="password" placeholder="Password"/> <br><br>
+        <button type="submit">submit</button>
+
+    </form>
+
+
+    <!--   <script src="js/script.js"></script>  --> 
+</body>
+</html>
