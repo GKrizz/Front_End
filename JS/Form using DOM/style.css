@@ -1,0 +1,21 @@
+body{
+    flex: auto;
+    background-color: #CAC6FF;
+}
+
+input{
+    width: 40%;
+    height: 30px;
+}
+button{
+    background-color: blue;
+    color:white ;
+}
+p{
+    width: 50%;
+    color:black, ;
+}
+tr,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
