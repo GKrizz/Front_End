@@ -79,3 +79,18 @@ for (let color of fruit){
     document.write("color : "+fruit+'<br>');
 }
 */
+//  -----------------------------------OBJECT & OOPS (object oriented programming )-------------------------\
+
+
+let person={
+    name:"gobal",
+    age: 20,
+    greeting : function(){
+        let msg = `My name is ${this.name},im ${this.age} years old`;
+        document.write(msg);
+    }
+}
+person.greeting()
+
+
+
