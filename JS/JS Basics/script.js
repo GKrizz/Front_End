@@ -81,7 +81,7 @@ for (let color of fruit){
 */
 //  -----------------------------------OBJECT & OOPS (object oriented programming )-------------------------\
 
-
+/*
 let person={
     name:"gobal",
     age: 20,
@@ -92,5 +92,22 @@ let person={
 }
 person.greeting()
 
+*/
+// ------------------------FACTORY Functions----------------------
 
-
+function createPerson(name){
+    return{
+        // name: name,
+        name,
+        age : 20,
+        // greeting : function(){
+        greeting(){
+            let msg = `My name is ${this.name},im ${this.age} years old <br>` ;
+            document.write(msg);
+        }
+    }; 
+}
+let gobal=  createPerson("gobal");
+let sanju = createPerson("sanjeevi kumar");
+gobal.greeting();
+sanju.greeting();
