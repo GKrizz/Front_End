@@ -95,7 +95,7 @@ person.greeting()
 */
 // ------------------------FACTORY Functions----------------------
 
-function createPerson(name){
+function createPerson(name){//camel case
     return{
         // name: name,
         name,
@@ -111,3 +111,14 @@ let gobal=  createPerson("gobal");
 let sanju = createPerson("sanjeevi kumar");
 gobal.greeting();
 sanju.greeting();
+
+// ----------------------------Constructor functions------------------------------------
+
+function Person(name){//pascal -> MyFirstName
+    this.name = name;
+    this.greeting = function(){
+        document.write(`my name is ${this.name}`);
+    }
+}
+let person = new Person('gobal');
+person.greeting();
