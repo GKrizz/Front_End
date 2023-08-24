@@ -4,6 +4,7 @@
 <head>
   <title>Brown Bears</title>
   <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
 </head>
 
 <body>
@@ -173,20 +174,33 @@
           </datalist>
         </section>
         <hr>
-        
+
         <section class="extra-info">
           <label for="extra">Anything else you want to add?</label>
           <br>
           <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
         </section>
-        <hr>
 
         <section class="submission">
           <input type="submit" value="Submit">
         </section>
+        <hr>
       </form>
-
     </section>
+
+<!----------------------------------------------------------- Forms Validation---------------------------------------------------------->
+
+    <section class="overlay">
+      <h1>Guess the right number!</h1>
+      <form action="check.html" method="GET">
+        <label for="guess">Enter a number between 1-10:</label>
+        <br>
+        <input type="number" name="guess" id="guess" required>
+        <br>
+        <input type="submit" id="submission" value="Submit">
+      </form>
+    </section>
+
 
 </body>
 
