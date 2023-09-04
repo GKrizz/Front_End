@@ -95,30 +95,42 @@ person.greeting()
 */
 // ------------------------FACTORY Functions----------------------
 
-function createPerson(name){//camel case
-    return{
-        // name: name,
-        name,
-        age : 20,
-        // greeting : function(){
-        greeting(){
-            let msg = `My name is ${this.name},im ${this.age} years old <br>` ;
-            document.write(msg);
-        }
-    }; 
-}
-let gobal=  createPerson("gobal");
-let sanju = createPerson("sanjeevi kumar");
-gobal.greeting();
-sanju.greeting();
+// function createPerson(name){//camel case
+//     return{
+//         // name: name,
+//         name,
+//         age : 20,
+//         // greeting : function(){
+//         greeting(){
+//             let msg = `My name is ${this.name},im ${this.age} years old <br>` ;
+//             document.write(msg);
+//         }
+//     }; 
+// }
+// let gobal=  createPerson("gobal");
+// let sanju = createPerson("sanjeevi kumar");
+// gobal.greeting();
+// sanju.greeting();
 
 // ----------------------------Constructor functions------------------------------------
 
-function Person(name){//pascal -> MyFirstName
-    this.name = name;
-    this.greeting = function(){
-        document.write(`my name is ${this.name}`);
-    }
+// function Person(name){//pascal -> MyFirstName
+//     this.name = name;
+//     this.greeting = function(){
+//         document.write(`my name is ${this.name}`);
+//     }
+// }
+// let person = new Person('gobal');
+// person.greeting();
+
+// ----------------------------Dynamic Objects------------------------------------
+
+const person={
+    name:"Gobal"
 }
-let person = new Person('gobal');
-person.greeting();
+person.age=24;
+person.greeting = function(){
+    document.write(`${this.name} im ${this.age}`)};
+
+delete person.age;
+console.log(person)
