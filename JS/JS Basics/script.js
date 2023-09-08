@@ -177,6 +177,13 @@ var result=data.map(function(items){
 console.log(result)  
 */
 
-// ----------------------------------------------------------------------------
+// ---------------------------------- >        Map ,REDUCE , FILTER     <------------------------------------------
+const marks = [35,55,89,25,45]
 
- 
+//map
+
+const grade= marks.map((e)=> e>=45? "pass":"fail") // fail , pass
+
+
+    console.log(marks);
+    console.log("grade",grade)
