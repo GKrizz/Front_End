@@ -125,12 +125,58 @@ person.greeting()
 
 // ----------------------------Dynamic Objects------------------------------------
 
-const person={
-    name:"Gobal"
-}
-person.age=24;
-person.greeting = function(){
-    document.write(`${this.name} im ${this.age}`)};
+// const person={
+//     name:"Gobal"
+// }
+// person.age=24;
+// person.greeting = function(){
+//     document.write(`${this.name} im ${this.age}`)};
 
-delete person.age;
-console.log(person)
+// delete person.age;
+// console.log(person)
+
+// ----------------------     MAP     -----------------------------------------
+/*
+1.Arrow Function
+    Map((element)=>{...})
+
+2.Callback Function
+    Map(callbackFun)
+    function callbackFun(element){...}
+
+3.Inline callback Function
+    Map(function(element){...})
+
+*/
+
+/*
+// 1.Arrow Function
+
+    var data=[10,20,30,40];
+    var result=data.map((items)=>{
+        // console.log(items)
+        return items;
+    });
+console.log(result)
+
+// 2.Callback Function
+    var result=data.map(display)
+
+    function display(item){
+        // console.log(item);
+        return item;
+    }
+    console.log(result)
+
+// 3.Inline callback Function
+
+var result=data.map(function(items){
+    // console.log(items)
+    return items;
+});
+console.log(result)  
+*/
+
+// ----------------------------------------------------------------------------
+
+ 
