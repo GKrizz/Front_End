@@ -177,13 +177,43 @@ var result=data.map(function(items){
 console.log(result)  
 */
 
+/*
 // ---------------------------------- >        Map ,REDUCE , FILTER     <------------------------------------------
 const marks = [35,55,89,25,45]
+console.log(marks);
 
 //map
 
 const grade= marks.map((e)=> e>=45? "pass":"fail") // fail , pass
+console.log("grade",grade)
+
+//filter
+
+const pass = marks.filter((e)=> e>=45)
+console.log("pass",pass)
+
+//reduce
+
+const sum = marks.reduce((acc , e ) => {
+    return acc + e ;
+},0 );
+console.log("sum",sum)
+
+*/
+
+// ------------------------------- CallBack--------------------------------
 
 
-    console.log(marks);
-    console.log("grade",grade)
+setTimeout(()=>{
+    console.log('callback1')
+    setTimeout(()=>{
+        console.log('callback2')
+        setTimeout(()=>{
+            console.log('callback3')
+            setTimeout(()=>{
+                console.log('callback4')
+            },4000)
+        },3000)
+    },2000)
+},1000)
+
