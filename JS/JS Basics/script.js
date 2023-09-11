@@ -201,19 +201,40 @@ console.log("sum",sum)
 
 */
 
-// ------------------------------- CallBack--------------------------------
+// ------------------------------- CallBack { ES5 }--------------------------------
 
 
-setTimeout(()=>{
-    console.log('callback1')
-    setTimeout(()=>{
-        console.log('callback2')
-        setTimeout(()=>{
-            console.log('callback3')
-            setTimeout(()=>{
-                console.log('callback4')
-            },4000)
-        },3000)
-    },2000)
-},1000)
+// setTimeout(()=>{
+//     console.log('callback1')
+//     setTimeout(()=>{
+//         console.log('callback2')
+//         setTimeout(()=>{
+//             console.log('callback3')
+//             setTimeout(()=>{
+//                 console.log('callback4')
+//             },4000)
+//         },3000)
+//     },2000)
+// },1000)
 
+/*const fs=require('fs');
+const axios = require('axios');
+console.log('===============================================');
+
+fs.readFile('./text.txt',{encoding: 'utf-8'},(error,data)=>{
+    console.log(data)
+})*/
+
+// ------------------------- Promise  (ES6) -----------------------------------
+
+const myPromise = new Promise((resolve,reject)=>{
+    const randomnum= Math.floor(Math.random()*2);
+    console.log(randomnum);
+    if(randomnum === 0){
+        resolve();
+    } else{
+        reject();
+    }
+})
+
+myPromise.then(()=> console.log('success')).catch(()=> console.log('Failure'));
