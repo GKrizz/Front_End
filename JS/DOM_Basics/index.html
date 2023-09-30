@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <style>
+        button{
+            background: black;
+            color:#fff ;
+            border-radius : 5px;
+        }
+    </style>
+
 </head>
 <body>
     <section>
         <input type="text" id="num" placeholder="Enter your number">
-        <button onclick="calc()">Click me</button> <br><br>
+        <button onclick="calc()">Click me</button> <br>
+        <p id="result"></p>
         <hr>
     </section>
 
@@ -21,7 +30,26 @@
         <h3 id="output"></h3> <hr>
     </section>
 
-   
+    <section>
+        <h1>Heading 1</h1>
+        <p class="p">I'm Gobala Krishnan</p>
+        <h1>Heading 2</h1>
+        <p class="p">I'm Gojo</p>
+        <h5>Bye</h5>
+        <button id="click" onclick="count()">Count</button>
+
+        <hr>
+    </section>
+
+    <section>
+        <button class="black blue"  onclick="blue()">Blue</button>
+        <button class="black green" onclick="green()">Green</button>
+        <button class="black red" onclick="red()">Red</button>
+        <button class="black" onclick="reset()">Reset</button>
+    </section>
+    <hr>
+
+    
 
 
 
