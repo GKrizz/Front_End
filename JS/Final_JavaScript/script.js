@@ -124,3 +124,8 @@ add.addEventListener("click",function(){
     listitem.textContent="hello";
     output.append(listitem)
 })
+
+var changecolor=document.getElementById("color");
+changecolor.addEventListener("click",function(){
+    changecolor.style.backgroundColor="red";
+})
