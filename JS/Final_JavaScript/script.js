@@ -115,3 +115,12 @@ function live(){
     result.style.color="red";
     result.style.fontSize="40px";
 }
+
+var output=document.getElementById("output");
+var add=document.getElementById("add");
+
+add.addEventListener("click",function(){
+    var listitem=document.createElement("h1");
+    listitem.textContent="hello";
+    output.append(listitem)
+})
