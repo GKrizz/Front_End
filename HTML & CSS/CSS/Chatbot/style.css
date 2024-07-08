@@ -1,0 +1,90 @@
+.chat-ui, .chat-scrollview {
+    overflow: visible;
+  }
+  /* Reset some default styling */
+body, h5, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the chat window */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.flow {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chat-ui {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.chat-titlebar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.chat-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat-scrollview {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-messagelist {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-cluster {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.chat-message {
+    background-color: #e1f7ff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.chat-avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-authoring {
+    background-color: white;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    outline: none;
+}
+
+.chat-authoring[contenteditable]:empty:before {
+    content: "Type your message...";
+    color: #999;
+}
