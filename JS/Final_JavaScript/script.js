@@ -78,3 +78,27 @@ button.addEventListener("click", function() {
     var add = number_1 + number_2;
     output.textContent = "Result : " + add;
 });
+
+// Generate a random number between 1 and 10
+var rand = Math.floor((Math.random() * 10) + 1);
+console.log(rand); // For debugging purposes
+var msg = document.getElementById("msg");
+var scoreElement = document.getElementById("score");
+var button1 = document.getElementById("check_btn");
+var score=10;
+
+button1.addEventListener("click", function() {
+    var number = parseFloat(document.getElementById("number").value);
+    if (number === rand) {
+        msg.textContent = "You are Right! ✅";
+    } else {
+        msg.textContent = "You are wrong❌";
+        score=score-1;
+        scoreElement.textContent="Chance : "+score;
+        if(score==0){
+            window.alert("Game over");
+            window.location.reload(); // Refresh the page
+        }
+    }
+});
+
