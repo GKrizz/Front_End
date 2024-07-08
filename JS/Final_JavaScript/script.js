@@ -129,8 +129,17 @@ var changecolor=document.getElementById("color");
 var h2List = document.querySelectorAll("h2");
 
 changecolor.addEventListener("click",function(){
-    changecolor.style.backgroundColor="red";
+    changecolor.style.backgroundColor="green";
     h2List.forEach(function(h2) {
-        h2.style.color = "Blue"; // Change background color of each <h2> element
+        h2.style.color = "red"; // Change background color of each <h2> element
+    });
+});
+
+var display=document.getElementById("name");
+var name_in_button=document.querySelectorAll(".btn");
+
+name_in_button.forEach(function(button) {
+    button.addEventListener("click", function() {
+        display.textContent = button.textContent;
     });
 })
