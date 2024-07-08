@@ -1,114 +1,110 @@
-# Project Name
+# 📚 **Project Name**
 
-## Table of Contents
+Welcome to the **Project Name** repository! This project contains various HTML, CSS, and JavaScript examples to help you learn and improve your front-end development skills.
 
-- [HTML & CSS](#html--css)
-  - [.vscode](#vscode)
-  - [css](#css)
-  - [HTML](#html)
-  - [login form](#login-form)
-  - [index.html](#indexhtml)
-  - [style.css](#stylecss)
-  - [Navigation bar](#navigation-bar)
-    - [index.html](#navigation-bar-indexhtml)
-    - [style.css](#navigation-bar-stylecss)
-- [JS](#js)
-  - [DOM](#dom)
-    - [index.html](#dom-indexhtml)
-    - [style.css](#dom-stylecss)
-  - [DOM_Basics](#dom_basics)
-  - [Form using DOM](#form-using-dom)
-  - [Form-validation](#form-validation)
-  - [JS Basics (ALL)](#js-basics-all)
-  - [JS_projects](#js_projects)
-    - [menu bar](#menu-bar)
-    - [Music Player](#music-player)
-    - [seconds count](#seconds-count)
-    - [Snake Game](#snake-game)
-- [README.md](#readmemd)
+---
 
-## HTML & CSS
+## 📑 **Table of Contents**
 
-### .vscode
+- [**HTML & CSS**](#html--css)
+  - [📂 .vscode](#vscode)
+  - [🎨 CSS](#css)
+  - [🌐 HTML](#html)
+  - [🔐 Login Form](#login-form)
+  - [📄 Index](#indexhtml)
+  - [💅 Style](#stylecss)
+  - [🚀 Navigation Bar](#navigation-bar)
+- [**JavaScript**](#javascript)
+  - [🌐 DOM](#dom)
+    - [📚 DOM Basics](#dom-basics)
+    - [✍️ Form using DOM](#form-using-dom)
+    - [✔️ Form Validation](#form-validation)
+  - [🚀 JS Basics (ALL)](#js-basics-all)
+  - [🚀 JS Projects](#js-projects)
+    - [📂 Menu Bar](#menu-bar)
+    - [🎵 Music Player](#music-player)
+    - [⏲️ Seconds Count](#seconds-count)
+    - [🐍 Snake Game](#snake-game)
+
+---
+
+## 🎨 **HTML & CSS**
+
+### 📂 **.vscode**
 
 This folder contains configuration files for Visual Studio Code.
 
-### css
+### 🎨 **CSS**
 
 This folder contains various CSS files used in the project.
 
-### HTML
+### 🌐 **HTML**
 
 This folder contains HTML files.
 
-### login form
+### 🔐 **Login Form**
 
 This folder contains the login form related files.
 
-### index.html
+### 📄 **Index**
 
 [Go to index.html](./HTML/index.html)
 
-### style.css
+### 💅 **Style**
 
 [Go to style.css](./HTML/style.css)
 
-### Navigation bar
+### 🚀 **Navigation Bar**
 
-#### index.html
+#### 📄 **Index**
 
 [Go to Navigation bar index.html](./Navigation%20bar/index.html)
 
-#### style.css
+#### 💅 **Style**
 
 [Go to Navigation bar style.css](./Navigation%20bar/style.css)
 
-## JS
+---
 
-### DOM
+## 💻 **JavaScript**
 
-#### index.html
+### 🌐 **DOM**
+
+#### 📄 **Index**
 
 [Go to DOM index.html](./DOM/index.html)
 
-#### style.css
-
-[Go to DOM style.css](./DOM/style.css)
-
-### DOM_Basics
+### 🌐 **DOM Basics**
 
 This folder contains the basics of DOM manipulation.
 
-### Form using DOM
+### ✍️ **Form using DOM**
 
 This folder contains forms created using DOM.
 
-### Form-validation
+### ✔️ **Form Validation**
 
 This folder contains form validation files.
 
-### JS Basics (ALL)
+### 📚 **JS Basics (ALL)**
 
 This folder contains all basic JavaScript files.
 
-### JS_projects
+### 🚀 **JS Projects**
 
-#### menu bar
+#### 📂 **Menu Bar**
 
 [Go to menu bar project](./JS_projects/menu%20bar/index.html)
 
-#### Music Player
+#### 🎵 **Music Player**
 
 [Go to Music Player project](./JS_projects/Music%20Player/index.html)
 
-#### seconds count
+#### ⏲️ **Seconds Count**
 
 [Go to seconds count project](./JS_projects/seconds%20count/index.html)
 
-#### Snake Game
+#### 🐍 **Snake Game**
 
 [Go to Snake Game project](./JS_projects/Snake%20Game/index.html)
 
-## README.md
-
-This file.
