@@ -102,3 +102,8 @@ button1.addEventListener("click", function() {
     }
 });
 
+//DOM Style manupulation
+function changecolor(){
+    var box=document.getElementById("box");
+    box.style.backgroundColor=54;
+}
