@@ -126,6 +126,11 @@ add.addEventListener("click",function(){
 })
 
 var changecolor=document.getElementById("color");
+var h2List = document.querySelectorAll("h2");
+
 changecolor.addEventListener("click",function(){
     changecolor.style.backgroundColor="red";
+    h2List.forEach(function(h2) {
+        h2.style.color = "Blue"; // Change background color of each <h2> element
+    });
 })
