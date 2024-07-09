@@ -108,6 +108,10 @@
 //     box.style.backgroundColor=54;
 // }
 
+// ----------------------------------------------------------------
+
+
+
 var result=document.getElementById("result");
 function live(){
     var text=document.getElementById("text_live").value;
@@ -143,3 +147,10 @@ name_in_button.forEach(function(button) {
         display.textContent = button.textContent;
     });
 })
+
+var number_del = document.querySelectorAll(".num");
+number_del.forEach(function(element) {
+    element.addEventListener("click", function() {
+        element.remove();
+    });
+});
