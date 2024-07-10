@@ -110,7 +110,7 @@
 
 // ----------------------------------------------------------------
 
-
+/*
 
 var result=document.getElementById("result");
 function live(){
@@ -154,3 +154,27 @@ number_del.forEach(function(element) {
         element.remove();
     });
 });
+
+*/
+
+var add=document.getElementById("add");
+var ul=document.getElementById("list-container");
+
+add.addEventListener("click",function(){
+    var input=document.getElementById("input");
+    var li=document.createElement("li");
+    li.innerHTML=input.value+"<button onclick='deleteitem(event)'>Delete</button>";
+    ul.append(li);
+    input.value='';
+
+    // var del_btn=document.createElement("button");
+    // del_btn.textContent="Delete";
+    // li.append(del_btn);
+    // del_btn.addEventListener("click",function(){
+    //     li.remove();
+    // });
+});
+
+function deleteitem(event){
+    event.target.parentElement.remove();
+}
