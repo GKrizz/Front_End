@@ -49,6 +49,7 @@ Number_2<input type="text" id="num2"><br>
 <h3 class="num">four</h3>
 
 -->
+<!--
 <h1>TODO List</h1>
 
 <input type="text" id="input">
@@ -56,5 +57,80 @@ Number_2<input type="text" id="num2"><br>
 <ul id="list-container">
     <li>Hello<button onclick="deleteitem(event)">Delete</button></li>
 </ul>
+-->
+<style>
+        table, tr, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        button {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
 
+<form>
+    <fieldset style="width: 230px;">
+        <legend>Student Form</legend>
+        <table>
+            <tr>
+                <th>Name</th>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td><input type="number" name="age" id="age"></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <th>Course</th>
+                <td>
+                    <select name="course" id="course">
+                        <option value="cse">CSE</option>
+                        <option value="csbs">CSBS</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="button" id="save">Save</button></td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+
+<table id="student-table">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Course</th>
+        <th>E-mail</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>Gojo</td>
+        <td>21</td>
+        <td>Male</td>
+        <td>CSBS</td>
+        <td>gojo@gmail.com</td>
+        <td><button onclick="deleteRow(event)">Delete</button></td>
+    </tr>
+</table>
 <script src="script.js"></script>

@@ -110,7 +110,7 @@
 
 // ----------------------------------------------------------------
 
-/*
+/*  TASK 💻
 
 var result=document.getElementById("result");
 function live(){
@@ -154,9 +154,9 @@ number_del.forEach(function(element) {
         element.remove();
     });
 });
-
+---------------------------------------------------------------------
 */
-
+/*  TODO 📝
 var add=document.getElementById("add");
 var ul=document.getElementById("list-container");
 
@@ -178,3 +178,55 @@ add.addEventListener("click",function(){
 function deleteitem(event){
     event.target.parentElement.remove();
 }
+----------------------------------------------------------------------
+*/
+
+
+var saveBtn = document.getElementById("save");
+    saveBtn.addEventListener("click", submit);
+
+    function submit(event) {
+        // Prevent form submission
+        event.preventDefault();
+
+        // Get the form input values
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '';
+        var course = document.getElementById("course").value;
+        var email = document.getElementById("email").value;
+        
+        if (name === '' || age === '' || gender === '' || course === '' || email === '') {
+            alert("Please fill in all required fields.");
+            return; // Exit the function if any required field is empty
+        }
+
+        // Create a new table row
+        var tr = document.createElement("tr");
+
+        // Create and append cells to the row
+        tr.innerHTML = 
+        `   <td>${name}</td>
+            <td>${age}</td>
+            <td>${gender}</td>
+            <td>${course}</td>
+            <td>${email}</td>
+            <td><button onclick="deleteRow(event)">Delete</button></td>
+        `;
+
+        // Append the new row to the table
+        var table = document.getElementById("student-table");
+        table.appendChild(tr);
+
+        // Clear the form inputs
+        document.getElementById("name").value = '';
+        document.getElementById("age").value = '';
+        document.getElementById("male").checked = false;
+        document.getElementById("female").checked = false;
+        document.getElementById("course").value = '';
+        document.getElementById("email").value = '';
+    }
+
+    function deleteRow(event) {
+        event.target.parentElement.parentElement.remove();
+    }
