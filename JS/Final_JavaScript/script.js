@@ -181,7 +181,7 @@ function deleteitem(event){
 ----------------------------------------------------------------------
 */
 
-
+/*  STUDENT FORM
 var saveBtn = document.getElementById("save");
     saveBtn.addEventListener("click", submit);
 
@@ -195,7 +195,7 @@ var saveBtn = document.getElementById("save");
         var gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '';
         var course = document.getElementById("course").value;
         var email = document.getElementById("email").value;
-        
+
         if (name === '' || age === '' || gender === '' || course === '' || email === '') {
             alert("Please fill in all required fields.");
             return; // Exit the function if any required field is empty
@@ -230,3 +230,7 @@ var saveBtn = document.getElementById("save");
     function deleteRow(event) {
         event.target.parentElement.parentElement.remove();
     }
+*/
+
+
+// -------------------------------------------------------------------
