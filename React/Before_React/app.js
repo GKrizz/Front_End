@@ -47,6 +47,7 @@ console.log(person2);
 */
 
 // -----------------------------|   Map , Filter ,Reduce  |-----------------------------
+/*
 const marks = [35,55,89,25,45]
 console.log(marks);
 
@@ -68,4 +69,32 @@ console.log("pass",pass)
 const sum = marks.reduce((acc , e ) => {
     return acc + e ;
 },0 );
-console.log("sum",sum)
+console.log("sum",sum);
+*/
+// -----------------------------|    Promise ,Async-await , Fetch  |-----------------------------
+
+// Promise is used to make the code asynchronous.
+// Syntax: new Promise((resolve,reject)=>{resolve("data");})
+            // .then((data)=>{console.log(data)})
+            // .catch((err)=>{console.log(err)});
+let takal_ticket=new Promise((resolve,reject)=>{
+    let is_bookingSuccess=true;
+    if(is_bookingSuccess)
+        resolve(250);
+    else
+        reject();
+});
+takal_ticket.then((amt)=>console.log(`Thanks for booking.I had sent rs.${amt}`))
+.catch(()=>console.log("Its ok i wll book bus"));
+
+// Async-await is used to make the code asynchronous.
+// Syntax: async function name(){return await promise;}
+
+
+
+// Fetch is used to make the code asynchronous.
+// Syntax: fetch("url")
+        // .then((data)=>{console.log(data)})
+        // .catch((err)=>{console.log(err)});
+
+
