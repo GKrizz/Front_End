@@ -77,10 +77,11 @@ console.log("sum",sum);
 // Syntax: new Promise((resolve,reject)=>{resolve("data");})
             // .then((data)=>{console.log(data)})
             // .catch((err)=>{console.log(err)});
+
 let takal_ticket=new Promise((resolve,reject)=>{
     let is_bookingSuccess=true;
     if(is_bookingSuccess)
-        resolve(250);
+        setTimeout(() => resolve(22), 3000);
     else
         reject();
 });
@@ -90,6 +91,18 @@ takal_ticket.then((amt)=>console.log(`Thanks for booking.I had sent rs.${amt}`))
 // Async-await is used to make the code asynchronous.
 // Syntax: async function name(){return await promise;}
 
+async function asyncStatus(){
+    try{
+        console.log("hi...async - await ");
+        res = await takal_ticket;
+        console.log(res);
+        console.log("bye..");
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+asyncStatus();
 
 
 // Fetch is used to make the code asynchronous.
