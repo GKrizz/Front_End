@@ -1,52 +1,49 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import TodoList from './TodoList';
-import { v4 as uuidv4 } from 'uuid'; // Import uuid correctly
-
-const LOCAL_STORAGE_KEY = 'todoApp.todos';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
-  const [todos, setTodos] = useState([]);
-  const todoNameRef = useRef();
+  const [todoList, setTodoList] = useState([]);
+  const inputRef = useRef();
 
   useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-    if (storedTodos) setTodos(storedTodos);
+    const localval = localStorage.getItem('TODOLIST');
+    setTodoList(JSON.parse(localval));
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
-  }, [todos]);
+    localStorage.setItem('TODOLIST', JSON.stringify(todoList));
+  }, [todoList]);
 
-  function toggleTodo(id) {
-    const newTodos = todos.map(todo => 
-      todo.id === id ? { ...todo, completed: !todo.completed } : todo
-    );
-    setTodos(newTodos);
+  const handleAddClick = () => {
+    const val = inputRef.current.value;
+    const tmpToDo = [...todoList];
+    tmpToDo.push({id: uuidv4(), desc: val, complete: false});
+    setTodoList(tmpToDo);
+    inputRef.current.value = '';
   }
 
-  function handleAddTodo() {
-    const name = todoNameRef.current.value;
-    if (name === "") return;
-    setTodos(prevTodos => [
-      ...prevTodos,
-      { id: uuidv4(), name: name, completed: false }
-    ]);
-    todoNameRef.current.value = "";
+  const toogleComplete = (id) => {
+    const tmpToDo = [...todoList];
+    const todoElem = tmpToDo.find(todo => todo.id === id);
+    todoElem.complete = !todoElem.complete;
+    setTodoList(tmpToDo);
   }
 
-  function handleClearCompleted() {
-    const newTodos = todos.filter(todo => !todo.completed);
-    setTodos(newTodos);
+  const clearComplete = () => {
+    const tmpToDo = [...todoList];
+    const unCompletetodo = tmpToDo.filter(todo => !todo.complete);
+    setTodoList(unCompletetodo);
   }
 
   return (
-    <>
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
-      <input ref={todoNameRef} type="text" />
-      <button onClick={handleAddTodo}>Add Todo</button>
-      <button onClick={handleClearCompleted}>Clear Completed</button>
-      <div>{todos.filter(todo => !todo.completed).length} left to do</div>
-    </>
+    <div>
+      <TodoList todoList={todoList} toogleComplete={toogleComplete} />
+      <input ref={inputRef} />
+      <button onClick={handleAddClick}>Add todo</button>
+      <button onClick={clearComplete}>Clear complete Todo</button>
+      <p>{todoList.filter(todo => !todo.complete).length} left to do</p>
+    </div>
   );
 }
 
