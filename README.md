@@ -1,6 +1,6 @@
 # 📚 **Front_End_learning**
 
-Welcome to the **Front_End_learning** repository! This project contains various HTML, CSS, and JavaScript examples to help you learn and improve your front-end development skills.
+Welcome to the **Front_End_learning** repository! This project contains various HTML, CSS, , JavaScript and React examples to help you learn and improve your front-end development skills.
 
 ---
 
